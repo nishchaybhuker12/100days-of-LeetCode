@@ -1,37 +1,9 @@
-#include<iostream>
-#include<stack>
+#include<bits/stdc++.h>
 using namespace std;
-
-void print(stack<int> stack){
-    for(int i =0; i<5; i++){
-        cout<<stack.top();
-        stack.pop();
-    }
-}
-
-void reverse(stack<int>  st){
-    stack<int> ans;
-    //base
-    if(st.empty()){
-    ans.push(st.top());
-    return;
-    }
-    int num = st.top();
-    st.pop();
-    reverse(st);
-    ans.push(num);
-}
-
 int main(){
-    stack<int> st;
-    st.push(5);
-    st.push(4);
-    st.push(3);
-    st.push(2);
-    st.push(1);
-
-    reverse(st);
-
-    print(st);
-
+    int arr[5] = {3,4,5,2,1};
+    int mini = min(5,4);
+    int maxi = max(5,4);
+    cout<<mini<<endl;
+    cout<<maxi<<endl;
 }
